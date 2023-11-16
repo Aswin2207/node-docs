@@ -9,7 +9,13 @@ let  docUrl = '';
 http.createServer(function (req, res) {
      
     // http header
-    res.writeHead(200, {'Content-Type': 'application/json','access-control-allow-headers':'*'}); 
+    const headers = {
+        'Access-Control-Allow-Origin': '*', /* @dev First, read about security */
+        'Access-Control-Allow-Methods': 'OPTIONS, GET',
+        'Content-Type': 'application/json'
+        /** add other headers as per requirement */
+      };
+    res.writeHead(200,headers); 
      
     const url = req.url;
      
