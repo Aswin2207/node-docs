@@ -24,7 +24,7 @@ http.createServer(function (req, res) {
             
         }
     
-}).listen(3000, function() {
+}).listen(10000, function() {
      
     // The server object listens on port 3000
     console.log("server start at port 3000");
